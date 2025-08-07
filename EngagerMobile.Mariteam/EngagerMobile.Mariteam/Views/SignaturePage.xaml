@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:signature="clr-namespace:SignaturePad.Forms;assembly=SignaturePad.Forms"
+             x:Class="EngagerMobile.Mariteam.Views.SignaturePage"
+             Title="Review and Sign">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <StackLayout AbsoluteLayout.LayoutFlags="All"
+                  AbsoluteLayout.LayoutBounds="0,0,1,1">
+                
+                <Image Source="mariteam_letterhead.jpg" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" 
+                       Aspect="AspectFit" IsOpaque="True" HeightRequest="150" Margin="15,0"/>
+
+                <Label x:Name="lblwoId" IsVisible="False"/>
+                <Label x:Name="lblserviceJobId" IsVisible="False"/>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                    <Label Text="Service Job Status: " />
+                    <Label x:Name="txtSJStatus" Text="{Binding WorkOrder.ServiceJobStatusStr}" 
+                           Style="{StaticResource DetailsFormEntry}"/>
+                    <Label Text="Order No.: "/>
+                    <Label x:Name="txtWONo" Text="{Binding WorkOrder.WorkOrderNo}" 
+                           Style="{StaticResource DetailsFormEntry}"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                        <Label Text="Customer: "/>
+                        <Label x:Name="txtCustomer" Text="{Binding WorkOrder.CompanyName}" 
+                               Style="{StaticResource DetailsFormEntry}"/>
+                    </StackLayout>
+
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                        <Label Text="Agent Name: "/>
+                        <Label x:Name="txtAgent" Text="{Binding WorkOrder.AgentName}" 
+                               Style="{StaticResource DetailsFormEntry}"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                        <Label Text="Vessel &amp; Voyage No.: "/>
+                        <Label x:Name="txtVessel" Text="{Binding WorkOrder.VesselName}" 
+                               Style="{StaticResource DetailsFormEntry}"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                        <Label Text="Passenger In-Charge: "/>
+                        <Label x:Name="txtInChargePassenger" Text="{Binding WorkOrder.InChargePassenger}"
+                           Style="{StaticResource DetailsFormEntry}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                        <Label Text="Rank of Passenger: "/>
+                        <Label x:Name="txtRankStr" Text="{Binding WorkOrder.RankStr}"
+                           Style="{StaticResource DetailsFormEntry}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                        <Label Text="Pick up Pax: "/>
+                        <Label x:Name="txtPickupPax" Text="{Binding WorkOrder.PickupPax}" 
+                           Style="{StaticResource DetailsFormEntry}" IsEnabled="False"/>
+                    </StackLayout>
+                </StackLayout>
+                
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                        <Label Text="Pickup Time: "/>
+                        <Label Text="{Binding PickupDateAndTime}" 
+                           Style="{StaticResource DetailsFormEntry}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                        <Label Text="Board Type: "/>
+                        <Label x:Name="txtBoardType" Text="{Binding WorkOrder.BoardTypeStr}" 
+                           Style="{StaticResource DetailsFormEntry}"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                        <Label Text="From: "/>
+                        <Label x:Name="txtFrom" Text="{Binding WorkOrder.PickupPoint}" 
+                           Style="{StaticResource DetailsFormEntry}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                        <Label Text="To: "/>
+                        <Label x:Name="txtTo" Text="{Binding WorkOrder.DropOffPoint}" 
+                           Style="{StaticResource DetailsFormEntry}"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand">
+                        <Label Text="Flight Details: "/>
+                        <Label x:Name="txtFlightNo" Text="{Binding WorkOrder.FlightNo}" 
+                           Style="{StaticResource DetailsFormEntry}"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand">
+                        <Label Text="Current Passenger: "/>
+                        <Picker x:Name="pickerCurrentPassenger" Title="Select a Passenger..." ItemsSource="{Binding Passengers}" ItemDisplayBinding="{Binding Name}"
+                                        SelectedItem="{Binding Id}" Margin="15,5" FontSize="Medium"></Picker>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                        <Button x:Name="btnAddPassenger" BackgroundColor="Black" TextColor="White"
+                                        Clicked="btnAddPassenger_Clicked"
+                                        FontFamily="fa-solid-900.ttf#Font Awesome 5 Free Solid"
+                                        Text="&#xf067;  Add Passenger"
+                                        CornerRadius="10"
+                                        Margin="15,5"></Button>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                        <Label Text="Passenger's Signature: "/>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" >
+                    <signature:SignaturePadView x:Name="padView"
+                                HeightRequest="700" HorizontalOptions="FillAndExpand" Margin="15,0"
+                                BackgroundColor="White"
+                                ClearText="Clear Signature" ClearTextColor="Red" 
+                                PromptText="Sign Here" PromptTextColor="{StaticResource PrimaryDark}"
+                                SignatureLineColor="Black" StrokeColor="Black" StrokeWidth="2" />
+
+                    
+                    <Button x:Name="btnSaveSign" Clicked="BtnSaveSign_onClicked"
+                    Text="&#xf093; Upload Signature" FontFamily="fa-solid-900.ttf#Font Awesome 5 Free Solid" 
+                    Style="{StaticResource PrimaryButton}" VerticalOptions="EndAndExpand"/>
+
+                    <Button x:Name="btnCompleteSign" Clicked="btnCompleteSign_Clicked"
+                    Text="&#xf0c7; Finish Signing" FontFamily="fa-solid-900.ttf#Font Awesome 5 Free Solid" 
+                    Style="{StaticResource WarningButton}" VerticalOptions="EndAndExpand"/>
+                </StackLayout>
+
+            </StackLayout>
+
+            <Frame x:Name="FrameLoading" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5, 0.5, -1, -1"
+                   BackgroundColor="Gray" Opacity="0.7" IsVisible="{Binding IsBusy}">
+                <StackLayout>
+                    <ActivityIndicator x:Name="actInd"  Color="{StaticResource PrimaryDark}" IsRunning="True" />
+                    <Label Text="Loading..." TextColor="White" FontAttributes="Bold" FontSize="25" />
+                </StackLayout>
+            </Frame>
+
+
+            <!--<ActivityIndicator x:Name="actInd" 
+                               IsRunning="{Binding IsBusy}"
+                               IsVisible="{Binding IsBusy}"
+                               AbsoluteLayout.LayoutFlags="PositionProportional"
+                               AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"/>-->
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

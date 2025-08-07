@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EngagerMobile.Mariteam.Views.SnapShotPage"
+             Title="Snapshot">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <StackLayout AbsoluteLayout.LayoutFlags="All"
+                  AbsoluteLayout.LayoutBounds="0,0,1,1">
+                <StackLayout VerticalOptions="Start">
+                    <Label x:Name="lblServerJobId" Text="{Binding serviceJobId}" IsVisible="False"/>
+                    <Label Text="Snapshot Description:"/>
+                    <Entry x:Name="txtSnapShotDes" Style="{StaticResource DetailsFormEntry}"/>
+                    <Image x:Name="imgSnapShot" HeightRequest="550"/>
+                </StackLayout>
+                <StackLayout VerticalOptions="EndAndExpand">
+
+                    <!--<Button x:Name="btnSnapShot"
+                        Text="&#xf030;  Take Another Photo"  Clicked="BtnSnapShot_OnClicked"
+                        FontFamily="fa-solid-900.ttf#Font Awesome 5 Free Solid" 
+                        Style="{StaticResource MiscButton}" />-->
+                    
+                    <Button x:Name="btnSubmit" Clicked="BtnSubmit_OnClicked"
+                        Text="&#xf093; Upload Photo" FontFamily="fa-solid-900.ttf#Font Awesome 5 Free Solid"                             
+                        Style="{StaticResource PrimaryButton}"/>
+                </StackLayout>
+            </StackLayout>
+
+            <Frame x:Name="FrameLoading" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5, 0.5, -1, -1"
+                   BackgroundColor="Gray" Opacity="0.7" IsVisible="{Binding IsBusy}">
+                <StackLayout>
+                    <ActivityIndicator x:Name="actInd"  Color="{StaticResource PrimaryDark}" IsRunning="True" />
+                    <Label Text="Loading..." TextColor="White" FontAttributes="Bold" FontSize="25" />
+                </StackLayout>
+            </Frame>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EngagerMobile.Mariteam.Views.SignInPage"
+             NavigationPage.HasBackButton="False"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="CONFIG" Clicked="ConfigItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <AbsoluteLayout>
+
+            <Image Source="engager_logo.png" VerticalOptions="Center" HorizontalOptions="Center" 
+                   WidthRequest="500" Aspect="AspectFit" IsOpaque="True"
+                   AbsoluteLayout.LayoutBounds=".5,55,300,300" AbsoluteLayout.LayoutFlags="XProportional"/>
+
+            <Label Text="Mariteam Mobile." VerticalOptions="StartAndExpand" HorizontalOptions="Center" 
+                   FontSize="20" TextColor="{StaticResource PrimaryDark}"
+                   AbsoluteLayout.LayoutBounds=".5,300,300,300" AbsoluteLayout.LayoutFlags="XProportional"/>
+
+            <Grid AbsoluteLayout.LayoutFlags="XProportional"
+                  AbsoluteLayout.LayoutBounds=".5,305,500,400"  VerticalOptions="CenterAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="6*" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Entry Placeholder="Username" x:Name="txtUserName"
+                       Text="{Binding Username}"
+                   Grid.Column="1" Grid.Row="2"/>
+
+                <!--<Entry Placeholder="Username" x:Name="txtUserName"
+                       Text="farhan@mariteam.com.sg"
+                   Grid.Column="1" Grid.Row="2"/>-->
+
+                <Entry Placeholder="Password"
+                        x:Name="txtPassword"
+                       Text="{Binding Password}" IsPassword="true" 
+                   Grid.Column="1" Grid.Row="3"/>
+
+                <Button x:Name="btnLogin" Text="Login" 
+                    TextColor="White"  BackgroundColor="{StaticResource PrimaryDark}" BorderRadius="4" HeightRequest="60" 
+                    FontSize="20" Command="{Binding LoginCommand}" Clicked="LoginButton_OnClicked"                        
+                    Grid.Column="1" Grid.Row="4" Margin="10"/>
+
+
+            </Grid>
+            
+            <Frame x:Name="FrameLoading" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5, 0.5, -1, -1"
+                   BackgroundColor="Gray" Opacity="0.7" IsVisible="{Binding IsBusy}">
+                <StackLayout>
+                    <ActivityIndicator x:Name="actInd"  Color="{StaticResource PrimaryDark}" IsRunning="True" />
+                    <Label Text="Loading..." TextColor="White" FontAttributes="Bold" FontSize="25" />
+                </StackLayout>
+            </Frame>
+        </AbsoluteLayout>
+
+
+
+    </ContentPage.Content>
+</ContentPage>

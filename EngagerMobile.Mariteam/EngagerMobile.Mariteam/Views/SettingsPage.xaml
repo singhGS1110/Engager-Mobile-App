@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EngagerMobile.Mariteam.Views.SettingsPage"
+             NavigationPage.HasBackButton="True"
+             Title="Settings"
+             NavigationPage.TitleIcon="engager_logo.png">-->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EngagerMobile.Mariteam.Views.SettingsPage"
+             NavigationPage.HasBackButton="True"
+             Title="Settings">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <Image Source="engager_logo.png" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" 
+                   WidthRequest="200" HeightRequest="200" Aspect="AspectFit" IsOpaque="True"
+                   AbsoluteLayout.LayoutBounds=".5,55,300,300" AbsoluteLayout.LayoutFlags="XProportional"/>
+
+            <Label Text="{Binding AppVersion}" VerticalOptions="StartAndExpand" HorizontalOptions="Center" 
+                   FontSize="Large" TextColor="Black"
+                   AbsoluteLayout.LayoutBounds=".5,250,300,300" AbsoluteLayout.LayoutFlags="XProportional"/>
+
+            <Label Text="{Binding ReleaseDate}" VerticalOptions="StartAndExpand" HorizontalOptions="Center" 
+                   FontSize="Medium" TextColor="{StaticResource LightTextColor}"
+                   AbsoluteLayout.LayoutBounds=".5,290,300,300" AbsoluteLayout.LayoutFlags="XProportional"/>
+
+            <Label Text="Powered By Xamarin" VerticalOptions="EndAndExpand" HorizontalOptions="Center" 
+                   FontSize="Large" FontAttributes="Bold"
+                   AbsoluteLayout.LayoutBounds=".5,605,300,300" AbsoluteLayout.LayoutFlags="XProportional"/>
+
+            <Grid AbsoluteLayout.LayoutFlags="All"
+                  AbsoluteLayout.LayoutBounds="0,0,1,1" VerticalOptions="Center">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Label Text="Current Logged In User: "
+                       Grid.Row="0" Grid.Column="0" 
+                       HorizontalTextAlignment="End"
+                       VerticalTextAlignment="Center"
+                       FontSize="Medium"/>
+
+                <Label Text="{Binding CurrentUserName}"
+                       Grid.Row="0" Grid.Column="1" 
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontSize="Large"
+                       TextColor="White"
+                       BackgroundColor="{StaticResource PrimaryDark}"/>
+
+                <Button x:Name="btnSignOut" Clicked="SignOutButton_Clicked"
+                        Style="{StaticResource WarningButton}"
+                        Text="&#xf2f5;  Sign Out"
+                        FontFamily="fa-solid-900.ttf#Font Awesome 5 Free Solid" 
+                        Grid.Row="0" Grid.Column="2"
+                        Margin="10"
+                        CornerRadius="10"/>
+            </Grid>
+
+        </AbsoluteLayout>
+
+    </ContentPage.Content>
+</ContentPage>

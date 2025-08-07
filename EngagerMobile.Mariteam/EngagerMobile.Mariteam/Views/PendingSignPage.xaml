@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EngagerMobile.Mariteam.Views.PendingSignPage"             
+             Title="Pending Customer Signature">
+    <ContentPage.Content>
+        <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout AbsoluteLayout.LayoutFlags="All"
+                  AbsoluteLayout.LayoutBounds="0,0,1,1">
+                <ScrollView>
+                    <StackLayout>
+                        <Label x:Name="lblServiceJobId" Text="{Binding WorkOrder.ServiceJobId}" IsVisible="False"/>
+                        <Label x:Name="lblPickUpPax" IsVisible="False"/>
+
+                        <Label Text="Order No.: "/>
+                        <Entry Text="{Binding WorkOrder.WorkOrderNo}"  
+                           Style="{StaticResource DetailsFormEntry}"  IsEnabled="False"/>
+
+                        <Label Text="Additional Info: "/>
+
+                        <StackLayout VerticalOptions="FillAndExpand" Orientation="Vertical">
+                            <ListView x:Name="CheckListItemsListView" ItemsSource="{Binding Checklists}" HasUnevenRows="true"
+                              RefreshCommand="{Binding LoadReferencesCommand}" IsPullToRefreshEnabled="false" IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                              CachingStrategy="RecycleElement"
+                              BackgroundColor="White" VerticalOptions="Start"
+                                      HeightRequest="50">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <ViewCell.View>
+                                                <Grid>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto"/>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Switch IsToggled="{Binding Selected}"
+                                                        Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"/>
+                                                    <Label Text="{Binding Id}" Style="{DynamicResource ListItemDetailTextStyle}" FontSize="13" IsVisible="False"
+                                                       Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" VerticalOptions="Center"/>
+                                                    <Label Text="{Binding Name}" Style="{DynamicResource ListItemDetailTextStyle}" FontSize="13" IsVisible="True"
+                                                       Grid.Row="0" Grid.Column="1" HorizontalOptions="Start" VerticalTextAlignment="Center" VerticalOptions="Center"/>
+                                                    <Label Text="Fees" Style="{DynamicResource ListItemDetailTextStyle}" FontSize="13"
+                                                       Grid.Row="0" Grid.Column="2" HorizontalOptions="End" VerticalTextAlignment="Center" VerticalOptions="Center" IsVisible="{Binding Selected}"/>
+                                                    <Entry Text="{Binding ShortText9}" Keyboard="Numeric"
+                                                           Grid.Row="0" Grid.Column="3" WidthRequest="100" HorizontalOptions="Start" IsVisible="{Binding Selected}"/>
+                                                </Grid>
+                                            </ViewCell.View>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </StackLayout>
+
+                        <Label Text="Trip Fees *: "/>
+                        <Entry Text="{Binding WorkOrder.TripFees}" 
+                                       x:Name="txtTripFees"
+                                       Style="{StaticResource DetailsFormEntry}" Keyboard="Numeric"/>
+
+                        <StackLayout Orientation="Horizontal" Margin="15,5">
+
+                            <Switch x:Name="swtMS" IsToggled="{Binding WorkOrder.IncludeMeetingServiceFee}" HorizontalOptions="Start"/>
+                            <Label Text="Include MS"/>
+                            
+                        </StackLayout>
+
+                        <Label Text="Additional Stops: "/>
+                        <Entry Text="{Binding WorkOrder.AdditionalStops}"
+                           x:Name="txtAdditionalStops"
+                           Style="{StaticResource DetailsFormEntry}" />
+
+                        <Label Text="Disposal: "/>
+                        <Entry x:Name="txtDisposal" 
+                           Style="{StaticResource DetailsFormEntry}" />
+
+                        <Label Text="Waiting Time: "/>
+                        <Entry x:Name="txtWaitingTime" 
+                           Style="{StaticResource DetailsFormEntry}" />
+
+                        <Label Text="Meeting Services: "/>
+
+                        <StackLayout VerticalOptions="FillAndExpand" Orientation="Vertical">
+                            <ListView x:Name="MeetingServiceItemsListView" ItemsSource="{Binding MeetingServices}" HasUnevenRows="true" 
+                                  RefreshCommand="{Binding LoadReferencesCommand}" IsPullToRefreshEnabled="true" IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                                  CachingStrategy="RecycleElement"  
+                                      BackgroundColor="White" VerticalOptions="Start"
+                                      HeightRequest="50">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <ViewCell.View>
+                                                <Grid>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto"/>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Switch IsToggled="{Binding Selected}"
+                                                        Grid.Row="0" Grid.Column="1" HorizontalOptions="Center"/>
+                                                    <Label Text="{Binding Id}" Style="{DynamicResource ListItemDetailTextStyle}" FontSize="13" IsVisible="False"
+                                                       Grid.Row="0" Grid.Column="2"/>
+                                                    <Label Text="{Binding Name}" Style="{DynamicResource ListItemDetailTextStyle}" FontSize="13" IsVisible="True"
+                                                       Grid.Row="0" Grid.Column="2"/>
+                                                </Grid>
+                                            </ViewCell.View>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </StackLayout>
+
+
+                        <Label Text="Custom Detentions: "/>
+                        <Picker x:Name="pickerDetention" Title="Select a Custom Detention..." ItemsSource="{Binding CustomDetentions}" ItemDisplayBinding="{Binding Name}" 
+                            SelectedIndex="{Binding Id}" Margin="15,0"></Picker>
+
+                        <Label Text="Add Remarks: "/>
+                        <Entry x:Name="txtRemark" Text="" 
+                           Style="{StaticResource DetailsFormEntry}" />
+                    </StackLayout>
+                </ScrollView>
+
+                <StackLayout VerticalOptions="End" HorizontalOptions="FillAndExpand">
+
+                    <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+
+                        <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                            
+                            <Button x:Name="btnSignature"
+                        Text="&#xf044;  Customer Sign" Clicked="SignButton_OnClicked" 
+                        FontFamily="fa-solid-900.ttf#Font Awesome 5 Free Solid" 
+                        Style="{StaticResource MiscButtonReverse}" IsVisible="True" Margin="5,5"
+                                        CornerRadius="10" />
+
+                            <Button x:Name="btnSigned"
+                                Text="&#xf058;  Signed" 
+                                FontSize="20" FontFamily="fa-solid-900.ttf#Font Awesome 5 Free Solid"
+                                BackgroundColor="White" TextColor="{StaticResource PrimaryGreen}"
+                                BorderWidth="2" BorderColor="{StaticResource PrimaryGreen}" 
+                                HeightRequest="70" Margin="5,5"
+                                        CornerRadius="10"                              
+                                IsVisible="False"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                            <Button x:Name="btnSnapShot"
+                        Text="&#xf030;  Snap Shot"  Clicked="SnapShotButton_OnClicked"
+                        FontFamily="fa-solid-900.ttf#Font Awesome 5 Free Solid" 
+                        Style="{StaticResource MiscButton}" IsVisible="True" Margin="5,5"
+                                        CornerRadius="10"/>
+                        </StackLayout>
+
+                    </StackLayout>
+
+                    <Button x:Name="btnComplete"
+                        Text="&#xf1d8;  Save &amp; Complete" Clicked="CompleteButton_OnClicked"
+                        Style="{StaticResource SuccessButton}" IsVisible="True"
+                        FontFamily="fa-solid-900.ttf#Font Awesome 5 Free Solid" />
+
+                </StackLayout>
+            </StackLayout>
+
+            <Frame x:Name="FrameLoading" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5, 0.5, -1, -1"
+                   BackgroundColor="Gray" Opacity="0.7" IsVisible="{Binding IsBusy}">
+                <StackLayout>
+                    <ActivityIndicator x:Name="actInd"  Color="{StaticResource PrimaryDark}" IsRunning="True" />
+                    <Label Text="Loading..." TextColor="White" FontAttributes="Bold" FontSize="25" />
+                </StackLayout>
+            </Frame>
+            
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

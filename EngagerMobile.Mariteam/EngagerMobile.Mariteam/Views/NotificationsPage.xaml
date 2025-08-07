@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EngagerMobile.Mariteam.Views.NotificationsPage"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <StackLayout AbsoluteLayout.LayoutBounds="0.5, 0.5, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                <Label x:Name="LblNoDataMessage" Text="{Binding ListMessage}" TextColor="{StaticResource PrimaryDark}"
+                       HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" IsVisible="{Binding HasNoListItem}" Margin="10,10"/>
+            </StackLayout>
+
+            <FlexLayout Direction="Column">
+                <FlexLayout Direction="Column" FlexLayout.Grow="1">
+                    <ListView x:Name="NotificationsListView"
+                              ItemsSource="{Binding NotificationsList}"
+                              VerticalOptions="FillAndExpand"
+                              HasUnevenRows="true"
+                              RefreshCommand="{Binding LoadItemsCommand}"
+                              IsPullToRefreshEnabled="true"
+                              IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                              CachingStrategy="RecycleElement">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal">
+                                        <StackLayout >
+                                            <Label Text="{Binding Description}" FontAttributes="Bold"/>
+                                            <Label Text="{Binding DetailedDescription}"/>
+                                        </StackLayout>
+                                        <StackLayout HorizontalOptions="EndAndExpand">
+                                            <Button CommandParameter="{Binding Id}"
+                                                    Clicked= "AcknowledgeButtonClicked"
+                                                    Text="&#xf164;  Acknowledge"
+                                                    FontSize="Medium"
+                                                    FontFamily="fa-solid-900.ttf#Font Awesome 5 Free Solid"
+                                                    Style="{StaticResource SuccessButton}"
+                                                    Margin="15,15"
+                                                    BorderRadius="10"
+                                                    HorizontalOptions="FillAndExpand"></Button>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </FlexLayout>
+            </FlexLayout>
+
+
+            <Frame x:Name="FrameLoading" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5, 0.5, -1, -1"
+                           BackgroundColor="Gray" Opacity="0.7" IsVisible="{Binding IsBusy}">
+                        <StackLayout>
+                            <ActivityIndicator x:Name="actInd"  Color="{StaticResource PrimaryDark}" IsRunning="True" />
+                            <Label Text="Loading..." TextColor="White" FontAttributes="Bold" FontSize="25" />
+                        </StackLayout>
+                    </Frame>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

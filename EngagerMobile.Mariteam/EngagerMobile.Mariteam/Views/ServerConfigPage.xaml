@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EngagerMobile.Mariteam.Views.ServerConfigPage"
+             NavigationPage.HasNavigationBar="True"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+        <StackLayout Padding="15" VerticalOptions="FillAndExpand" BackgroundColor="White">
+            <Label Text="IP: "/>
+            <Entry x:Name="txtIP" Text="{Binding IP}"/>
+            <Label Text="Port: "/>
+            <Entry x:Name="txtPort" Text="{Binding Port}"/>
+            <Label Text="Is HTTP? : "/>
+            <Picker x:Name="pickHTTP" SelectedIndex="1">
+                <Picker.Items>
+                    <x:String>HTTP</x:String>
+                    <x:String>HTTPs</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Button x:Name="btnSave" Clicked="BtnSave_onClicked" Text="Save" BackgroundColor="#2db1ff" BorderColor="White" TextColor="White" BorderWidth="1" BorderRadius="3"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

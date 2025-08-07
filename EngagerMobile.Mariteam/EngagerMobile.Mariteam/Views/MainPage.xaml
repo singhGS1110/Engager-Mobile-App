@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:EngagerMobile.Mariteam.CustomRenderers"
+             x:Class="EngagerMobile.Mariteam.Views.MainPage"
+             NavigationPage.HasBackButton="False"
+             Title="{Binding Title}">
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Margin="0">
+            <Image Source="icon.png" HeightRequest="48" WidthRequest="48" />
+
+            <Label Text="Main Page" TextColor="Snow" FontAttributes="Bold" FontSize="Medium" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" />
+
+            <!--<Frame BackgroundColor="WhiteSmoke" Padding="5" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Margin="0, 0, 10, 0"
+                    CornerRadius="30" BorderColor="#FFD700">-->
+                <Label Text="{Binding CurrentUserName}" FontSize="Medium" FontAttributes="Bold" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="5"></Label>
+            <!--</Frame>-->
+
+            <Label Text="&#xf2f1;" FontFamily="fa-solid-900.ttf#Font Awesome 5 Free Solid" TextColor="White" FontSize="Large" VerticalOptions="CenterAndExpand">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="RefreshItem_Clicked"></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Label Text="&#xf0f3;" FontFamily="fa-solid-900.ttf#Font Awesome 5 Free Solid" TextColor="White" FontSize="Large" VerticalOptions="CenterAndExpand" Margin="5,15,0,15">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="NotificationsItem_Clicked"></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Frame BackgroundColor="{StaticResource PrimaryCrimson}" Padding="10" VerticalOptions="Start" CornerRadius="30"  Margin="0,15,5,15">
+                <Label Text="{Binding NotificationCount}" FontSize="Small" FontAttributes="Bold" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" Margin="0">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="NotificationsItem_Clicked"></TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="NotificationsItem_Clicked"></TapGestureRecognizer>
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <Label Text="&#xf013;" FontFamily="fa-solid-900.ttf#Font Awesome 5 Free Solid" TextColor="White" FontSize="Large" VerticalOptions="CenterAndExpand">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="SettingItem_Clicked"></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </Label>
+
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem Text="{Binding CurrentUserName}"/>
+        <ToolbarItem Icon="refresh_icon.png" Clicked="RefreshItem_Clicked"/>
+        <ToolbarItem Icon="setting_icon.png" Clicked="SettingItem_Clicked"/>
+    </ContentPage.ToolbarItems>-->
+    <ContentPage.Content>
+        <Grid Margin="5" Padding="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.5*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="0.5*"></RowDefinition>
+                    <RowDefinition Height="6*"></RowDefinition>
+                <!--<RowDefinition Height="70"></RowDefinition>
+                    <RowDefinition Height="140"></RowDefinition>
+                    <RowDefinition Height="100*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="100"></RowDefinition>-->
+            </Grid.RowDefinitions>
+
+                <!-- Count Section -->
+                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" 
+                   Margin="5,0" FontAttributes="Bold"                      
+                   FontSize="Large" Text="Pending"
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+
+                <Label Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="4" 
+                   Margin="5,0" FontAttributes="Bold" 
+                   FontSize="Large" Text="Completed" 
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+
+
+
+
+            <local:CustomLabel x:Name="lblPendingCount" 
+                   Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" 
+                   CurvedBackgroundColor="{StaticResource PrimaryCrimson}" 
+                   Margin="5,0" 
+                   TextColor="White" FontAttributes="Bold" FontSize="45" 
+                   Text="{Binding PendingTasks.Count}" 
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                                   CurvedCornerRadius="10">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="LblPending_OnTapped"></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </local:CustomLabel>
+
+            <!--<Label x:Name="lblPendingCount" 
+                   Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" 
+                   BackgroundColor="{StaticResource PrimaryCrimson}" 
+                   Margin="5,0" 
+                   TextColor="White" FontAttributes="Bold" FontSize="30" 
+                   Text="{Binding PendingTasks.Count}" 
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>-->
+
+            <local:CustomLabel x:Name="lblCompletedCount" 
+                   Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="4" 
+                   CurvedBackgroundColor="{StaticResource PrimaryGreen}" 
+                   Margin="5,0" 
+                   TextColor="White" FontAttributes="Bold" FontSize="45" 
+                   Text="{Binding CompletedTasks.Count}" 
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                               CurvedCornerRadius="10">
+
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="LblCompleted_OnTapped"></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+
+            </local:CustomLabel>
+
+            <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" 
+                   Margin="5,0" 
+                   FontSize="Medium" Text="Pickup Date/Time." 
+                   HorizontalTextAlignment="Start" VerticalTextAlignment="Center" />
+
+            <Label Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="4" 
+                   Margin="5,0"
+                   FontSize="Medium" Text="Pickup Point." 
+                   HorizontalTextAlignment="Start" VerticalTextAlignment="Center" />
+
+            <Label Grid.Row="2" Grid.Column="6" Grid.ColumnSpan="2" 
+                   Margin="5,0"
+                   FontSize="Medium" Text="Status." 
+                   HorizontalTextAlignment="Start" VerticalTextAlignment="Center" />
+
+            <!--<Label x:Name="lblCompletedCount" 
+                   Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="4" 
+                   BackgroundColor="{StaticResource PrimaryGreen}" 
+                   Margin="5,0" 
+                   TextColor="White" FontAttributes="Bold" FontSize="30" 
+                   Text="{Binding CompletedTasks.Count}" 
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>-->
+
+
+                <!--Pending Task Table Section-->
+
+                <!--<Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="7" BackgroundColor="{StaticResource PrimaryDark}" Margin="5,0,0,0" TextColor="White" 
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold">Pending Tasks</Label>
+
+                <Label x:Name="lblPending" Grid.Row="2" Grid.Column="7" BackgroundColor="{StaticResource PrimaryCrimson}" Margin="0,0,5,0" TextColor="White" HeightRequest="20" Text="&#xf101;"  
+                   FontFamily="fa-solid-900.ttf#Font Awesome 5 Free Solid" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="LblPending_OnTapped"></TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>-->
+            <ScrollView Grid.Row="3" Grid.ColumnSpan="8" >
+                <StackLayout>
+                    <StackLayout BackgroundColor="White">
+                        <Label x:Name="LblNoDataMessage" Text="{Binding ListMessage}" TextColor="{StaticResource PrimaryDark}"
+                       HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" IsVisible="{Binding HasNoListItem}" Margin="10,10"/>
+                    </StackLayout>
+                    
+                    <ListView x:Name="lstPending" 
+                      BackgroundColor="White" Margin="5,0,5,0" 
+                      ItemsSource="{Binding CurrentTasks}" VerticalOptions="FillAndExpand" RefreshCommand="{Binding LoadWorkOrdersCommand}"
+                      IsRefreshing="{Binding IsBusy, Mode=OneWay}" CachingStrategy="RecycleElement" ItemTapped="lstPending_ItemTapped"
+                      SeparatorColor="White" MinimumHeightRequest="600">
+
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+
+                                    <!--<Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Text="{Binding WorkOrderNo}" LineBreakMode="NoWrap"
+                                       Grid.Row="0" Grid.Column="0" HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center"
+                                       FontSize="Medium"  TextColor="{StaticResource DarkTextColor}" Margin="5,0"/>
+
+                                    <Label Text="WO Status: "
+                                       Grid.Row="0" Grid.Column="1" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center"
+                                       FontSize="Medium"  TextColor="{StaticResource LightTextColor}"/>
+
+                                    <Label Text="{Binding StatusStr}" Style="{StaticResource ListItemLabel}"
+                                       Grid.Row="0" Grid.Column="2" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center"
+                                       FontSize="Medium" TextColor="{StaticResource DarkTextColor}" />
+
+                                    <Label Text="Job Status: "
+                                       Grid.Row="0" Grid.Column="3" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center"
+                                       FontSize="Medium"  TextColor="{StaticResource LightTextColor}"/>
+
+                                    <Label Text="{Binding ServiceJobStatusStr}" Style="{StaticResource ListItemLabel}"
+                                       Grid.Row="0" Grid.Column="4" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center"
+                                       FontSize="Medium" TextColor="{StaticResource DarkTextColor}" />
+
+                                </Grid>-->
+
+
+                                    <Grid VerticalOptions="FillAndExpand">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+
+
+                                        <Label Text="{Binding PickupTime}" LineBreakMode="NoWrap"
+                                       Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center"
+                                       FontSize="Small" FontAttributes="Bold"  TextColor="{StaticResource DarkTextColor}" Margin="15,5"/>
+
+                                        <Label Text="{Binding PickupPoint}" Style="{StaticResource ListItemLabel}"
+                                       Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"   HorizontalOptions="Start" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center"
+                                       FontSize="Small" TextColor="{StaticResource DarkTextColor}" Margin="15,5"/>
+
+                                        <Label Text="{Binding ServiceJobStatusStr}" Style="{StaticResource ListItemLabel}"
+                                       Grid.Row="0" Grid.Column="3"  HorizontalOptions="Start" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center"
+                                       FontSize="Small" TextColor="{StaticResource DarkTextColor}" Margin="15,5"/>
+
+
+                                        <BoxView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4"
+                                         HeightRequest="1" 
+                                         HorizontalOptions="Fill" VerticalOptions="Center"
+                                         BackgroundColor="{StaticResource LightBackgroundColor}" Margin="30,0"/>
+                                    </Grid>
+
+
+
+
+                                    <!--<Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Text="{Binding WorkOrderNo}" LineBreakMode="NoWrap"
+                                       Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="StartAndExpand"
+                                       TextColor="{StaticResource PrimaryDark}" FontAttributes="Bold" Margin="5,5"/>
+
+                                    <Label Text="{Binding ServiceJobStatusStr}"
+                                       Grid.Row="0" Grid.Column="3" HorizontalOptions="StartAndExpand" 
+                                       FontAttributes="Bold"/>
+
+                                    <Label Text="Pickup Time: "
+                                       Grid.Row="1" Grid.Column="0" HorizontalOptions="StartAndExpand" TextColor="{StaticResource LightTextColor}"/>
+
+                                    <Label Text="{Binding PickupTime}" 
+                                       Grid.Row="1" Grid.Column="1" HorizontalOptions="StartAndExpand"/>
+
+                                    <Label Text="StandBy Time: "
+                                       Grid.Row="1" Grid.Column="2" HorizontalOptions="StartAndExpand" TextColor="{StaticResource LightTextColor}"/>
+
+                                    <Label Text="{Binding StandByTime}"
+                                       Grid.Row="1" Grid.Column="3" HorizontalOptions="StartAndExpand"/>
+
+                                    <Label Text="Pickup Point: "
+                                       Grid.Row="2" Grid.Column="0" HorizontalOptions="StartAndExpand" TextColor="{StaticResource LightTextColor}"/>
+
+                                    <Label Text="{Binding PickupPoint}"
+                                       Grid.Row="2" Grid.Column="1" HorizontalOptions="StartAndExpand"/>
+
+                                    <Label Text="DropOff Point: "
+                                       Grid.Row="2" Grid.Column="2" HorizontalOptions="StartAndExpand" TextColor="{StaticResource LightTextColor}"/>
+
+                                    <Label Text="{Binding DropOffPoint}" 
+                                       Grid.Row="2" Grid.Column="3" HorizontalOptions="StartAndExpand"/>
+
+
+                                </Grid>-->
+
+                                </ViewCell>
+
+
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                </StackLayout>
+            </ScrollView>
+
+                <!-- Completed Tasks Table Section -->
+                <!--<Label Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="7" BackgroundColor="{StaticResource PrimaryDark}" Margin="5,0,0,0" TextColor="White" 
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold">Completed Tasks</Label>
+
+                <Label x:Name="lblCompleted" Grid.Row="4" Grid.Column="7" BackgroundColor="{StaticResource PrimaryGreen}" Margin="0,0,5,0" TextColor="White" HeightRequest="20" Text="&#xf101;"  
+                   FontFamily="fa-solid-900.ttf#Font Awesome 5 Free Solid" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="LblCompleted_OnTapped"></TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>-->
+
+                <!--<ListView x:Name="lstCompleted"
+                      Grid.Row="5" Grid.ColumnSpan="8" BackgroundColor="White" Margin="5,0,5,0" 
+                      ItemsSource="{Binding CompletedTasks}" VerticalOptions="FillAndExpand" RefreshCommand="{Binding LoadWorkOrdersCommand}"
+                      IsRefreshing="{Binding IsBusy, Mode=OneWay}" CachingStrategy="RecycleElement" IsEnabled="False"
+                      SeparatorColor="White"
+                      HeightRequest="0">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding WorkOrderNo}" LineBreakMode="NoWrap"
+                                       Grid.Row="0" Grid.Column="0" HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center"
+                                       FontSize="Medium"  TextColor="{StaticResource DarkTextColor}" Margin="5,0"/>
+
+                                <Label Text="WO Status: "
+                                       Grid.Row="0" Grid.Column="1" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center"
+                                       FontSize="Medium"  TextColor="{StaticResource LightTextColor}"/>
+
+                                <Label Text="{Binding StatusStr}" Style="{StaticResource ListItemLabel}"
+                                       Grid.Row="0" Grid.Column="2" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center"
+                                       FontSize="Medium" TextColor="{StaticResource DarkTextColor}" />
+
+                                <Label Text="Job Status: "
+                                       Grid.Row="0" Grid.Column="3" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center"
+                                       FontSize="Medium"  TextColor="{StaticResource LightTextColor}"/>
+
+                                <Label Text="{Binding ServiceJobStatusStr}" Style="{StaticResource ListItemLabel}"
+                                       Grid.Row="0" Grid.Column="4" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center"
+                                       FontSize="Medium" TextColor="{StaticResource DarkTextColor}" />
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>-->
+            </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EngagerMobile.Mariteam.Views.WorkOrderDetailsPage"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+        <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout AbsoluteLayout.LayoutFlags="All"
+                  AbsoluteLayout.LayoutBounds="0,0,1,1">
+
+                <Entry x:Name="txtWOId" Text="{Binding WorkOrder.WorkOrderId}" IsVisible="False"/>
+                <Entry x:Name="txtSJobId" Text="{Binding WorkOrder.ServiceJobId}" IsVisible="False"/>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <!--Row #0-->
+
+                    <Label Text="Service Job Status: " 
+                           Grid.Row="0" Grid.Column="0" Margin="15,10,15,0"/>
+                    <Label x:Name="txtSJStatus" Text="{Binding WorkOrder.ServiceJobStatusStr}" 
+                           Style="{StaticResource DetailsFormEntry}"
+                           Grid.Row="0" Grid.Column="1" Margin="15,10,15,0"/>
+
+                    <Label Text="Order No.: "
+                           Grid.Row="0" Grid.Column="2" Margin="15,10,15,0"/>
+                    <Label x:Name="txtWONo" Text="{Binding WorkOrder.WorkOrderNo}" 
+                           Style="{StaticResource DetailsFormEntry}" IsEnabled="False"
+                           Grid.Row="0" Grid.Column="3" Margin="15,10,15,0"/>
+
+                    <!--Row #1-->
+                    <Label Text="Customer: "
+                           Grid.Row="1" Grid.Column="0" Margin="15,10,15,0"/>
+                    <Label x:Name="txtCustomer" Text="{Binding WorkOrder.CompanyName}" 
+                           Style="{StaticResource DetailsFormEntry}" IsEnabled="False"
+                           Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Margin="15,10,15,0"/>
+
+                    <!--Row #2-->
+
+
+                    <Label Text="Agent Name: "
+                           Grid.Row="2" Grid.Column="0" Margin="15,10,15,0"/>
+                    <Label x:Name="txtAgent" Text="{Binding WorkOrder.AgentName}" 
+                           Style="{StaticResource DetailsFormEntry}" IsEnabled="False"
+                           Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Margin="15,10,15,0"/>
+
+                    <!--Row #3-->
+
+
+                    <Label Text="Vessel &amp; Voyage No.: "
+                           Grid.Row="3" Grid.Column="0" Margin="15,10,15,0"/>
+                    <Label x:Name="txtVessel" Text="{Binding WorkOrder.VesselName}" 
+                           Style="{StaticResource DetailsFormEntry}" IsEnabled="False"
+                           Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Margin="15,10,15,0"/>
+
+
+                    <!--Row #4-->
+
+                    <Label Text="Pickup Date &amp; Time: "
+                           Grid.Row="4" Grid.Column="0" Margin="15,10,15,0"/>
+                    <Label Text="{Binding PickupDateAndTime}" 
+                           Style="{StaticResource DetailsFormEntry}" IsEnabled="False"
+                           Grid.Row="4" Grid.Column="1" Margin="15,10,15,0"/>
+
+                    <Label Text="StandBy Date &amp; Time:"
+                           Grid.Row="4" Grid.Column="2" Margin="15,10,15,0"/>
+                    <Label x:Name="lblAdminStandBy" Text="{Binding StandByDateAndTime}" 
+                           Style="{StaticResource DetailsFormEntry}" IsEnabled="False"
+                           Grid.Row="4" Grid.Column="3" Margin="15,10,15,0"/>
+
+
+                    <!--Row #5-->
+                    <Label Text="From: " 
+                           Grid.Row="5" Grid.Column="0" Margin="15,10,15,0"/>
+                    <Label x:Name="txtFrom" Text="{Binding PickupPointStr}" 
+                           Style="{StaticResource DetailsFormEntry}" IsEnabled="False"
+                           Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" Margin="15,10,15,0"/>
+
+
+                    <!--Row #6-->
+
+                    <Label Text="To: " 
+                           Grid.Row="6" Grid.Column="0" Margin="15,10,15,0"/>
+                    <Label x:Name="txtTo" Text="{Binding DropOffPointStr}" 
+                           Style="{StaticResource DetailsFormEntry}" IsEnabled="False"
+                           Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="3" Margin="15,10,15,0"/>
+
+
+                    <!--Row #7-->
+                    <Label Text="Additional Stop: " 
+                           Grid.Row="7" Grid.Column="0" Margin="15,10,15,0"/>
+                    <Label x:Name="txtaddStop" Text="{Binding WorkOrder.AdditionalStops}" 
+                           Style="{StaticResource DetailsFormEntry}" IsEnabled="False"
+                           Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="3" Margin="15,10,15,0"/>
+
+                    <!--Row #8-->
+                    <Label Text="Flight Details: " 
+                           Grid.Row="8" Grid.Column="0" Margin="15,10,15,0"/>
+                    <Label x:Name="txtFlightNo" Text="{Binding WorkOrder.FlightNo}" 
+                           Style="{StaticResource DetailsFormEntry}" IsEnabled="False"
+                           Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="3" Margin="15,10,15,0"/>
+
+                    <!--<Label x:Name="txtInChargePassenger" Text="{Binding WorkOrder.InChargePassenger}"
+                           Style="{StaticResource DetailsFormEntry}" IsEnabled="False"
+                           Grid.Row="8" Grid.Column="1"/>
+
+                    <Label Text="Rank of Passenger: "
+                           Grid.Row="8" Grid.Column="2"/>
+                    <Label x:Name="txtRankStr" Text="{Binding WorkOrder.RankStr}"
+                           Style="{StaticResource DetailsFormEntry}" IsEnabled="False"
+                           Grid.Row="8" Grid.Column="3"/>-->
+
+
+
+
+                    <!--Row #9-->
+
+                    <Label Text="Passenger In-Charge: "
+                           Grid.Row="9" Grid.Column="0" Margin="15,10,15,0"/>
+                    <Label x:Name="txtInChargePassenger" Text="{Binding PassengerInformation}"
+                           Style="{StaticResource DetailsFormEntry}" IsEnabled="False"
+                           Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="2" Margin="15,10,15,0"/>
+
+                    <StackLayout Grid.Row="9" Grid.Column="3" Orientation="Horizontal">
+                        <Label Text="Board Type: " Margin="15,10,15,0"
+                           HorizontalOptions="Start"/>
+                        <Label x:Name="txtBoardType" Text="{Binding WorkOrder.BoardTypeStr}" 
+                           Style="{StaticResource DetailsFormEntry}" IsEnabled="False" Margin="15,10,15,0"
+                           HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+
+
+
+
+
+                    <!--<Label Text="Total No of Pax: " 
+                           Grid.Row="9" Grid.Column="0"/>
+                    <Label x:Name="txtNoOfPax" Text="{Binding WorkOrder.NoOfPax}" 
+                           Style="{StaticResource DetailsFormEntry}" IsEnabled="False"
+                           Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="3"/>-->
+
+                    <!--Row #10-->
+                    <Label Text="Admin Remarks: " 
+                           Grid.Row="10" Grid.Column="0" Margin="15,10,15,0"/>
+                    <Label x:Name="txtRemarks" Text="{Binding WorkOrder.Remark}" 
+                           Style="{StaticResource DetailsFormEntry}" IsEnabled="False" 
+                           Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="3" Margin="15,10,15,0"/>
+
+
+
+                </Grid>
+
+                <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand"  Margin="0" Padding="0">
+                    <BoxView HeightRequest="1" BackgroundColor="{StaticResource PrimaryDark}" Margin="30,5"/>
+
+                    <StackLayout x:Name="lytPax"  IsVisible="False">
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Label FontSize="Medium" FontAttributes="Bold">Passenger In Charge Name:</Label>
+                                <Entry x:Name="txtEditInChargePassenger" 
+                                       Style="{StaticResource DetailsFormEntry}" 
+                                       Text="{Binding WorkOrder.InChargePassenger}"
+                                       FontSize="Medium"
+                                       HorizontalOptions="FillAndExpand" Margin="15,5"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                <Button x:Name="btnSaveData" BackgroundColor="{StaticResource PrimaryGreen}" TextColor="White"
+                                        Clicked="btnSaveData_Clicked"
+                                        FontFamily="fa-solid-900.ttf#Font Awesome 5 Free Solid"
+                                        Text="&#xf0c7;  Save Data"
+                                        CornerRadius="10"
+                                        Margin="15,5"></Button>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                                <Label FontSize="Medium" FontAttributes="Bold">Rank:</Label>
+                                <Picker x:Name="pickerEditRank" Title="Select a Rank..." ItemsSource="{Binding Ranks}" ItemDisplayBinding="{Binding Name}"
+                                        SelectedItem="{Binding PassengerRank}" Margin="15,5" FontSize="Medium"></Picker>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                                <Label FontSize="Medium" FontAttributes="Bold">Pick-up Pax:</Label>
+                                <Entry x:Name="txtEditPax" Text="{Binding PickUpPaxStr}" 
+                                       Style="{StaticResource DetailsFormEntry}" Keyboard="Numeric" FontSize="Medium" Margin="15,5"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                <Button x:Name="btnAddPassenger" BackgroundColor="Black" TextColor="White"
+                                        Clicked="btnAddPassenger_Clicked"
+                                        FontFamily="fa-solid-900.ttf#Font Awesome 5 Free Solid"
+                                        Text="&#xf067;  Add Passenger"
+                                        CornerRadius="10"
+                                        Margin="15,5"></Button>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+
+                        <StackLayout  x:Name="lytModifyDate" Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+
+                            <Button x:Name="BtnStandByTime"
+                                    Clicked="BtnStandByTime_Clicked" 
+                                    Text="&#xf067;  Stand by Date Time" 
+                                    FontFamily="fa-solid-900.ttf#Font Awesome 5 Free Solid"
+                                    BackgroundColor="{StaticResource PrimaryDark}"
+                                    TextColor="White"
+                                    Margin="5,5" CornerRadius="10"
+                                    IsVisible="True" />
+                            
+                        </StackLayout>
+
+                        <StackLayout x:Name="lytModifyReason" Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                            
+                            <Button x:Name="BtnReason"
+                                    Clicked="BtnReason_Clicked"
+                                    Text="&#xf067;  Give Reason"
+                                    FontFamily="fa-solid-900.ttf#Font Awesome 5 Free Solid" 
+                                    BackgroundColor="{StaticResource PrimaryDark}"
+                                    TextColor="White"
+                                    Margin="5,5" CornerRadius="10"
+                                    IsVisible="True" />
+                        </StackLayout>
+
+                    </StackLayout>
+
+
+
+                    <!--<StackLayout x:Name="lytModifyDate"  Orientation="Horizontal" IsVisible="False">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="Start">
+                            <Switch x:Name="switchDate" IsToggled="{Binding ModifyStandByDate}" Toggled="ModifyDateSwitch_Toggled"  Margin="15,5"></Switch>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" HorizontalOptions="End">
+                            <Label Text="I want to submit Standby Date and Time."
+                                   FontAttributes="Bold" FontSize="Medium"/>
+                        </StackLayout>
+                    </StackLayout>-->
+
+                    <Label x:Name="lblDateTime" Text="Standby Date &amp; Time: *" 
+                       IsVisible="False" FontSize="Medium" TextColor="{StaticResource PrimaryCrimson}" FontAttributes="Bold"/>
+
+                    <StackLayout x:Name="lytDateEntry" Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+
+                        <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                            <DatePicker x:Name="dpStandByDate" Margin="15,0" IsVisible="True"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                            <TimePicker x:Name="tpStandByTime" Margin="15,0" IsVisible="True"/>
+                        </StackLayout>
+
+                    </StackLayout>
+
+                    <!--<StackLayout x:Name="lytModifyReason"  Orientation="Horizontal" IsVisible="False">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="Start">
+                            <Switch x:Name="switchReason" IsToggled="{Binding ModifyReason}" Toggled="ModifyReasonSwitch_Toggled" Margin="15,5"></Switch>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" HorizontalOptions="End">
+                            <Label Text="I do not want to submit Standby Date and Time."
+                                   FontAttributes="Bold" FontSize="Medium"/>
+                        </StackLayout>
+                    </StackLayout>-->
+
+                    <StackLayout x:Name="lytReason" Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+
+                        <Label Text="Choose a Reason for not submitting : "/>
+                        <Picker x:Name="pickerReason" Title="Select a Reason..." Margin="15,0">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>No follow-up pickup.</x:String>
+                                    <x:String>Will arrange with agent.</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                        
+                    </StackLayout>
+
+                    <Button x:Name="btnAcknowledge" Text="&#xf274;  Acknowledge"
+                            Style="{StaticResource PrimaryButton}"
+                            VerticalOptions="EndAndExpand"
+                            FontFamily="fa-solid-900.ttf#Font Awesome 5 Free Solid"
+                            Clicked="BtnAcknowledge_OnClicked" />
+
+                    <Button x:Name="btnBegin" Text="&#xf207;  Begin Task" Clicked="BtnBegin_OnClicked" 
+                            Style="{StaticResource SuccessButton}"
+                            VerticalOptions="EndAndExpand"
+                            FontFamily="fa-solid-900.ttf#Font Awesome 5 Free Solid"
+                            IsVisible="False"/>
+
+                    <Button x:Name="btnEnd" Text="&#xf024;  End Task" Clicked="BtnEnd_OnClicked" 
+                        Style="{StaticResource WarningButton}"
+                        VerticalOptions="EndAndExpand"
+                            FontFamily="fa-solid-900.ttf#Font Awesome 5 Free Solid"
+                        IsVisible="False"/>
+                    
+                    <Button x:Name="btnMap" Text="View Map" Clicked="BtnMap_OnClicked"
+                        Style="{StaticResource MiscButton}"
+                        VerticalOptions="EndAndExpand"
+                        IsVisible="False"/>
+                </StackLayout>
+            </StackLayout>
+
+            <Frame x:Name="FrameLoading" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5, 0.5, -1, -1"
+                   BackgroundColor="Gray" Opacity="0.7" IsVisible="{Binding IsBusy}">
+                <StackLayout>
+                    <ActivityIndicator x:Name="actInd"  Color="{StaticResource PrimaryDark}" IsRunning="True" />
+                    <Label Text="Loading..." TextColor="White" FontAttributes="Bold" FontSize="25" />
+                </StackLayout>
+            </Frame>
+
+            <!--<ActivityIndicator x:Name="actInd" 
+                               IsRunning="{Binding IsBusy}"
+                               IsVisible="{Binding IsBusy}"
+                               AbsoluteLayout.LayoutFlags="PositionProportional"
+                               AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"/>-->
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

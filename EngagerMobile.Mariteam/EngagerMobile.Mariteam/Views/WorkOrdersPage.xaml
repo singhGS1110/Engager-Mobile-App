@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EngagerMobile.Mariteam.Views.WorkOrdersPage"
+             Title="{Binding Title}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="refresh_icon.png" Clicked="RefreshIcon_OnClicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Label x:Name="LblNoDataMessage" Text="No current jobs."
+                       HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" IsVisible="{Binding HasNoListItem}" Margin="10,10"/>
+            </StackLayout>
+
+            <ListView x:Name="WorkOrdersListView" ItemsSource="{Binding WorkOrders}"
+                      VerticalOptions="FillAndExpand" HasUnevenRows="true" 
+                      RefreshCommand="{Binding LoadWorkOrdersCommand}" IsPullToRefreshEnabled="true" IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                      CachingStrategy="RecycleElement" ItemTapped="OnItemTapped"
+                      SeparatorColor="White" Margin="0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding WorkOrderNo}" LineBreakMode="NoWrap"
+                                       Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="StartAndExpand"
+                                       Style="{DynamicResource ListItemLabel}" TextColor="{StaticResource PrimaryDark}" FontSize="Large" FontAttributes="Bold" Margin="5,5"/>
+
+                                <Label Text="{Binding ServiceJobStatusStr}" Style="{StaticResource ListItemLabel}"
+                                       Grid.Row="0" Grid.Column="1" HorizontalOptions="CenterAndExpand" 
+                                       FontSize="Large" FontAttributes="Bold"/>
+
+                                <Label Text="Pickup Date/Time: " Style="{StaticResource ListItemLabel}"
+                                       Grid.Row="1" Grid.Column="0" HorizontalOptions="StartAndExpand" TextColor="{StaticResource LightTextColor}" Margin="5,5,0,5"/>
+
+                                <Label Text="{Binding PickupTime}" Style="{StaticResource ListItemLabel}" 
+                                       Grid.Row="2" Grid.Column="0" HorizontalOptions="StartAndExpand"/>
+
+                                <Label Text="StandBy Date/Time: " Style="{StaticResource ListItemLabel}"
+                                       Grid.Row="1" Grid.Column="1" HorizontalOptions="StartAndExpand" TextColor="{StaticResource LightTextColor}" Margin="5,5,0,5"/>
+
+                                <Label Text="{Binding StandByTime}" Style="{StaticResource ListItemLabel}" 
+                                       Grid.Row="2" Grid.Column="1" HorizontalOptions="StartAndExpand"/>
+
+                                <Label Text="Pickup Point: " Style="{StaticResource ListItemLabel}"
+                                       Grid.Row="3" Grid.Column="0" HorizontalOptions="StartAndExpand" TextColor="{StaticResource LightTextColor}" Margin="5,5,0,5"/>
+
+                                <Label Text="{Binding PickupPoint}" Style="{StaticResource ListItemLabel}" 
+                                       Grid.Row="4" Grid.Column="0" HorizontalOptions="StartAndExpand"/>
+
+                                <Label Text="DropOff Point: " Style="{StaticResource ListItemLabel}"
+                                       Grid.Row="3" Grid.Column="1" HorizontalOptions="StartAndExpand" TextColor="{StaticResource LightTextColor}" Margin="5,5,0,5"/>
+
+                                <Label Text="{Binding DropOffPoint}" Style="{StaticResource ListItemLabel}" 
+                                       Grid.Row="4" Grid.Column="1" HorizontalOptions="StartAndExpand"/>    
+
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "351326332667",
+    "firebase_url": "https://engager.firebaseio.com",
+    "project_id": "engager",
+    "storage_bucket": "engager.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:351326332667:android:c6d4b6bcf36487bf",
+        "android_client_info": {
+          "package_name": "com.fxs.engager.engagermobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "351326332667-8nhvh0dqk7p5tpqkighdqprthp61k3ot.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgvLcsPcFYizOZrv-1AN9WscZ6I3aOZSk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,10 @@
+C:\WorkplaceFF\MTS\MobileApp\EngagerMobile.Mariteam.ApplicationCore\bin\Debug\netstandard2.0\EngagerMobile.Mariteam.ApplicationCore.deps.json
+C:\WorkplaceFF\MTS\MobileApp\EngagerMobile.Mariteam.ApplicationCore\bin\Debug\netstandard2.0\EngagerMobile.Mariteam.ApplicationCore.dll
+C:\WorkplaceFF\MTS\MobileApp\EngagerMobile.Mariteam.ApplicationCore\bin\Debug\netstandard2.0\EngagerMobile.Mariteam.ApplicationCore.pdb
+C:\WorkplaceFF\MTS\MobileApp\EngagerMobile.Mariteam.ApplicationCore\obj\Debug\netstandard2.0\EngagerMobile.Mariteam.ApplicationCore.csproj.AssemblyReference.cache
+C:\WorkplaceFF\MTS\MobileApp\EngagerMobile.Mariteam.ApplicationCore\obj\Debug\netstandard2.0\EngagerMobile.Mariteam.ApplicationCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\WorkplaceFF\MTS\MobileApp\EngagerMobile.Mariteam.ApplicationCore\obj\Debug\netstandard2.0\EngagerMobile.Mariteam.ApplicationCore.AssemblyInfoInputs.cache
+C:\WorkplaceFF\MTS\MobileApp\EngagerMobile.Mariteam.ApplicationCore\obj\Debug\netstandard2.0\EngagerMobile.Mariteam.ApplicationCore.AssemblyInfo.cs
+C:\WorkplaceFF\MTS\MobileApp\EngagerMobile.Mariteam.ApplicationCore\obj\Debug\netstandard2.0\EngagerMobile.Mariteam.ApplicationCore.csproj.CoreCompileInputs.cache
+C:\WorkplaceFF\MTS\MobileApp\EngagerMobile.Mariteam.ApplicationCore\obj\Debug\netstandard2.0\EngagerMobile.Mariteam.ApplicationCore.dll
+C:\WorkplaceFF\MTS\MobileApp\EngagerMobile.Mariteam.ApplicationCore\obj\Debug\netstandard2.0\EngagerMobile.Mariteam.ApplicationCore.pdb

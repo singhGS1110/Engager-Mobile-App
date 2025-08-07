@@ -1,0 +1,465 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.iOS\\EngagerMobile.Mariteam.iOS.csproj": {}
+  },
+  "projects": {
+    "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam.ApplicationCore\\EngagerMobile.Mariteam.ApplicationCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam.ApplicationCore\\EngagerMobile.Mariteam.ApplicationCore.csproj",
+        "projectName": "EngagerMobile.Mariteam.ApplicationCore",
+        "projectPath": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam.ApplicationCore\\EngagerMobile.Mariteam.ApplicationCore.csproj",
+        "packagesPath": "C:\\Users\\AungYeKaung\\.nuget\\packages\\",
+        "outputPath": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam.ApplicationCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\AungYeKaung\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\WorkplaceFF\\AIMS\\MobileApp\\EngagerMobile\\EngagerMobile\\InfrgisticsNugetPackage": {},
+          "C:\\WorkplaceFF\\AIMS\\MobileApp\\EngagerMobile\\EngagerMobile\\VouseNugetPackage": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.5.231, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam.Common\\EngagerMobile.Mariteam.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam.Common\\EngagerMobile.Mariteam.Common.csproj",
+        "projectName": "EngagerMobile.Mariteam.Common",
+        "projectPath": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam.Common\\EngagerMobile.Mariteam.Common.csproj",
+        "packagesPath": "C:\\Users\\AungYeKaung\\.nuget\\packages\\",
+        "outputPath": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\AungYeKaung\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\WorkplaceFF\\AIMS\\MobileApp\\EngagerMobile\\EngagerMobile\\InfrgisticsNugetPackage": {},
+          "C:\\WorkplaceFF\\AIMS\\MobileApp\\EngagerMobile\\EngagerMobile\\VouseNugetPackage": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam.Services\\EngagerMobile.Mariteam.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam.Services\\EngagerMobile.Mariteam.Services.csproj",
+        "projectName": "EngagerMobile.Mariteam.Services",
+        "projectPath": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam.Services\\EngagerMobile.Mariteam.Services.csproj",
+        "packagesPath": "C:\\Users\\AungYeKaung\\.nuget\\packages\\",
+        "outputPath": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\AungYeKaung\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\WorkplaceFF\\AIMS\\MobileApp\\EngagerMobile\\EngagerMobile\\InfrgisticsNugetPackage": {},
+          "C:\\WorkplaceFF\\AIMS\\MobileApp\\EngagerMobile\\EngagerMobile\\VouseNugetPackage": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {
+              "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam.ApplicationCore\\EngagerMobile.Mariteam.ApplicationCore.csproj": {
+                "projectPath": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam.ApplicationCore\\EngagerMobile.Mariteam.ApplicationCore.csproj"
+              },
+              "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam.Common\\EngagerMobile.Mariteam.Common.csproj": {
+                "projectPath": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam.Common\\EngagerMobile.Mariteam.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[11.0.2, )"
+            },
+            "Xam.Plugin.Geolocator": {
+              "target": "Package",
+              "version": "[4.5.0.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.iOS\\EngagerMobile.Mariteam.iOS.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.iOS\\EngagerMobile.Mariteam.iOS.csproj",
+        "projectName": "EngagerMobile.Mariteam.iOS",
+        "projectPath": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.iOS\\EngagerMobile.Mariteam.iOS.csproj",
+        "packagesPath": "C:\\Users\\AungYeKaung\\.nuget\\packages\\",
+        "outputPath": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.iOS\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "UsingMicrosoftNETSdk": false,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\AungYeKaung\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "xamarinios10"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\WorkplaceFF\\AIMS\\MobileApp\\EngagerMobile\\EngagerMobile\\InfrgisticsNugetPackage": {},
+          "C:\\WorkplaceFF\\AIMS\\MobileApp\\EngagerMobile\\EngagerMobile\\VouseNugetPackage": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "xamarinios10": {
+            "projectReferences": {
+              "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.csproj": {
+                "projectPath": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.csproj"
+              }
+            }
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "xamarinios10": {
+          "dependencies": {
+            "Microsoft.AppCenter": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Microsoft.AppCenter.Analytics": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Microsoft.AppCenter.Crashes": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Microsoft.AppCenter.Distribute": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Xam.Plugin.Connectivity": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
+            "Xam.Plugin.Geolocator": {
+              "target": "Package",
+              "version": "[4.5.0.6, )"
+            },
+            "Xam.Plugin.Media": {
+              "target": "Package",
+              "version": "[4.0.1.5, )"
+            },
+            "Xamarin.Controls.SignaturePad.Forms": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.5.0.657, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.5.231, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-arm64": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.csproj",
+        "projectName": "EngagerMobile.Mariteam",
+        "projectPath": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.csproj",
+        "packagesPath": "C:\\Users\\AungYeKaung\\.nuget\\packages\\",
+        "outputPath": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\AungYeKaung\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\WorkplaceFF\\AIMS\\MobileApp\\EngagerMobile\\EngagerMobile\\InfrgisticsNugetPackage": {},
+          "C:\\WorkplaceFF\\AIMS\\MobileApp\\EngagerMobile\\EngagerMobile\\VouseNugetPackage": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {
+              "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam.ApplicationCore\\EngagerMobile.Mariteam.ApplicationCore.csproj": {
+                "projectPath": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam.ApplicationCore\\EngagerMobile.Mariteam.ApplicationCore.csproj"
+              },
+              "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam.Common\\EngagerMobile.Mariteam.Common.csproj": {
+                "projectPath": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam.Common\\EngagerMobile.Mariteam.Common.csproj"
+              },
+              "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam.Services\\EngagerMobile.Mariteam.Services.csproj": {
+                "projectPath": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam.Services\\EngagerMobile.Mariteam.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "Microsoft.AppCenter": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Microsoft.AppCenter.Analytics": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Microsoft.AppCenter.Crashes": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Microsoft.AppCenter.Distribute": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Xam.Plugin.Connectivity": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
+            "Xam.Plugin.Geolocator": {
+              "target": "Package",
+              "version": "[4.5.0.6, )"
+            },
+            "Xam.Plugin.Media": {
+              "target": "Package",
+              "version": "[4.0.1.5, )"
+            },
+            "Xamarin.Controls.SignaturePad.Forms": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.5.0.657, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.5.231, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

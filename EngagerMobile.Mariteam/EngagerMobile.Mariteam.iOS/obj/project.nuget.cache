@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "dgSpecHash": "545Y/Vvpr3k=",
+  "success": true,
+  "projectFilePath": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.iOS\\EngagerMobile.Mariteam.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AungYeKaung\\.nuget\\packages\\microsoft.appcenter\\4.0.0\\microsoft.appcenter.4.0.0.nupkg.sha512",
+    "C:\\Users\\AungYeKaung\\.nuget\\packages\\microsoft.appcenter.analytics\\4.0.0\\microsoft.appcenter.analytics.4.0.0.nupkg.sha512",
+    "C:\\Users\\AungYeKaung\\.nuget\\packages\\microsoft.appcenter.crashes\\4.0.0\\microsoft.appcenter.crashes.4.0.0.nupkg.sha512",
+    "C:\\Users\\AungYeKaung\\.nuget\\packages\\microsoft.appcenter.distribute\\4.0.0\\microsoft.appcenter.distribute.4.0.0.nupkg.sha512",
+    "C:\\Users\\AungYeKaung\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\AungYeKaung\\.nuget\\packages\\plugin.permissions\\3.0.0.12\\plugin.permissions.3.0.0.12.nupkg.sha512",
+    "C:\\Users\\AungYeKaung\\.nuget\\packages\\sqlite-net-pcl\\1.5.231\\sqlite-net-pcl.1.5.231.nupkg.sha512",
+    "C:\\Users\\AungYeKaung\\.nuget\\packages\\sqlitepclraw.bundle_green\\1.1.11\\sqlitepclraw.bundle_green.1.1.11.nupkg.sha512",
+    "C:\\Users\\AungYeKaung\\.nuget\\packages\\sqlitepclraw.core\\1.1.11\\sqlitepclraw.core.1.1.11.nupkg.sha512",
+    "C:\\Users\\AungYeKaung\\.nuget\\packages\\sqlitepclraw.provider.sqlite3.ios_unified\\1.1.11\\sqlitepclraw.provider.sqlite3.ios_unified.1.1.11.nupkg.sha512",
+    "C:\\Users\\AungYeKaung\\.nuget\\packages\\xam.plugin.connectivity\\3.2.0\\xam.plugin.connectivity.3.2.0.nupkg.sha512",
+    "C:\\Users\\AungYeKaung\\.nuget\\packages\\xam.plugin.geolocator\\4.5.0.6\\xam.plugin.geolocator.4.5.0.6.nupkg.sha512",
+    "C:\\Users\\AungYeKaung\\.nuget\\packages\\xam.plugin.media\\4.0.1.5\\xam.plugin.media.4.0.1.5.nupkg.sha512",
+    "C:\\Users\\AungYeKaung\\.nuget\\packages\\xamarin.controls.signaturepad\\3.0.0\\xamarin.controls.signaturepad.3.0.0.nupkg.sha512",
+    "C:\\Users\\AungYeKaung\\.nuget\\packages\\xamarin.controls.signaturepad.forms\\3.0.0\\xamarin.controls.signaturepad.forms.3.0.0.nupkg.sha512",
+    "C:\\Users\\AungYeKaung\\.nuget\\packages\\xamarin.forms\\4.5.0.657\\xamarin.forms.4.5.0.657.nupkg.sha512"
+  ],
+  "logs": []
+}
