@@ -1,0 +1,9 @@
+˜
+ŒC:\Office_Work\MobileApp\EngagerMobile.Mariteam\EngagerMobile.Mariteam.Android\obj\Debug\100\MonoAndroid,Version=v10.0.AssemblyAttributes.csutf-8r
+iC:\Office_Work\MobileApp\EngagerMobile.Mariteam\EngagerMobile.Mariteam.Android\Properties\AssemblyInfo.csutf-8x
+mC:\Office_Work\MobileApp\EngagerMobile.Mariteam\EngagerMobile.Mariteam.Android\Resources\Resource.Designer.csutf-8s
+jC:\Office_Work\MobileApp\EngagerMobile.Mariteam\EngagerMobile.Mariteam.Android\Helpers\FileAccessHelper.csutf-8g
+^C:\Office_Work\MobileApp\EngagerMobile.Mariteam\EngagerMobile.Mariteam.Android\MainActivity.csutf-8v
+mC:\Office_Work\MobileApp\EngagerMobile.Mariteam\EngagerMobile.Mariteam.Android\Helpers\MyFirebaseIDService.csutf-8q
+hC:\Office_Work\MobileApp\EngagerMobile.Mariteam\EngagerMobile.Mariteam.Android\Helpers\MessageAndroid.csutf-8~
+uC:\Office_Work\MobileApp\EngagerMobile.Mariteam\EngagerMobile.Mariteam.Android\CustomRenderers\CustomLabelRenderer.csutf-8

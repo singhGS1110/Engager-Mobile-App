@@ -2875,17 +2875,17 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\AungYeKaung\\.nuget\\packages\\": {},
+    "C:\\Users\\Gurkirat\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.iOS\\EngagerMobile.Mariteam.iOS.csproj",
+      "projectUniqueName": "C:\\Office_Work\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.iOS\\EngagerMobile.Mariteam.iOS.csproj",
       "projectName": "EngagerMobile.Mariteam.iOS",
-      "projectPath": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.iOS\\EngagerMobile.Mariteam.iOS.csproj",
-      "packagesPath": "C:\\Users\\AungYeKaung\\.nuget\\packages\\",
-      "outputPath": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.iOS\\obj\\",
+      "projectPath": "C:\\Office_Work\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.iOS\\EngagerMobile.Mariteam.iOS.csproj",
+      "packagesPath": "C:\\Users\\Gurkirat\\.nuget\\packages\\",
+      "outputPath": "C:\\Office_Work\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "UsingMicrosoftNETSdk": false,
@@ -2893,7 +2893,7 @@
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\AungYeKaung\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Gurkirat\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2902,15 +2902,13 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\WorkplaceFF\\AIMS\\MobileApp\\EngagerMobile\\EngagerMobile\\InfrgisticsNugetPackage": {},
-        "C:\\WorkplaceFF\\AIMS\\MobileApp\\EngagerMobile\\EngagerMobile\\VouseNugetPackage": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.csproj": {
-              "projectPath": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.csproj"
+            "C:\\Office_Work\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.csproj": {
+              "projectPath": "C:\\Office_Work\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.csproj"
             }
           }
         }

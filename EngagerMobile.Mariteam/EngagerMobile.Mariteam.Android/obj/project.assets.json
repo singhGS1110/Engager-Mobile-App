@@ -4809,17 +4809,17 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\AungYeKaung\\.nuget\\packages\\": {},
+    "C:\\Users\\Gurkirat\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.Android\\EngagerMobile.Mariteam.Android.csproj",
+      "projectUniqueName": "C:\\Office_Work\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.Android\\EngagerMobile.Mariteam.Android.csproj",
       "projectName": "EngagerMobile.Mariteam.Android",
-      "projectPath": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.Android\\EngagerMobile.Mariteam.Android.csproj",
-      "packagesPath": "C:\\Users\\AungYeKaung\\.nuget\\packages\\",
-      "outputPath": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.Android\\obj\\",
+      "projectPath": "C:\\Office_Work\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.Android\\EngagerMobile.Mariteam.Android.csproj",
+      "packagesPath": "C:\\Users\\Gurkirat\\.nuget\\packages\\",
+      "outputPath": "C:\\Office_Work\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "UsingMicrosoftNETSdk": false,
@@ -4827,7 +4827,7 @@
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\AungYeKaung\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Gurkirat\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4836,18 +4836,16 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\WorkplaceFF\\AIMS\\MobileApp\\EngagerMobile\\EngagerMobile\\InfrgisticsNugetPackage": {},
-        "C:\\WorkplaceFF\\AIMS\\MobileApp\\EngagerMobile\\EngagerMobile\\VouseNugetPackage": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "monoandroid10.0": {
           "projectReferences": {
-            "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam.Common\\EngagerMobile.Mariteam.Common.csproj": {
-              "projectPath": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam.Common\\EngagerMobile.Mariteam.Common.csproj"
+            "C:\\Office_Work\\MobileApp\\EngagerMobile.Mariteam.Common\\EngagerMobile.Mariteam.Common.csproj": {
+              "projectPath": "C:\\Office_Work\\MobileApp\\EngagerMobile.Mariteam.Common\\EngagerMobile.Mariteam.Common.csproj"
             },
-            "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.csproj": {
-              "projectPath": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.csproj"
+            "C:\\Office_Work\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.csproj": {
+              "projectPath": "C:\\Office_Work\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.csproj"
             }
           }
         }

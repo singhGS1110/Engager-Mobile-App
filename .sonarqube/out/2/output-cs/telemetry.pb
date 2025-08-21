@@ -1,0 +1,1 @@
+~R_C:\Office_Work\MobileApp\EngagerMobile.Mariteam.Services\EngagerMobile.Mariteam.Services.csproj¢netstandard2.0ò	CSharp7_3

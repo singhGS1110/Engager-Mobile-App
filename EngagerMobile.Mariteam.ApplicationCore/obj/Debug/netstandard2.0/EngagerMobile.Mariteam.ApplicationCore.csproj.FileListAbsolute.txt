@@ -8,3 +8,14 @@ C:\WorkplaceFF\MTS\MobileApp\EngagerMobile.Mariteam.ApplicationCore\obj\Debug\ne
 C:\WorkplaceFF\MTS\MobileApp\EngagerMobile.Mariteam.ApplicationCore\obj\Debug\netstandard2.0\EngagerMobile.Mariteam.ApplicationCore.csproj.CoreCompileInputs.cache
 C:\WorkplaceFF\MTS\MobileApp\EngagerMobile.Mariteam.ApplicationCore\obj\Debug\netstandard2.0\EngagerMobile.Mariteam.ApplicationCore.dll
 C:\WorkplaceFF\MTS\MobileApp\EngagerMobile.Mariteam.ApplicationCore\obj\Debug\netstandard2.0\EngagerMobile.Mariteam.ApplicationCore.pdb
+C:\Office_Work\MobileApp\EngagerMobile.Mariteam.ApplicationCore\bin\Debug\netstandard2.0\EngagerMobile.Mariteam.ApplicationCore.deps.json
+C:\Office_Work\MobileApp\EngagerMobile.Mariteam.ApplicationCore\bin\Debug\netstandard2.0\EngagerMobile.Mariteam.ApplicationCore.dll
+C:\Office_Work\MobileApp\EngagerMobile.Mariteam.ApplicationCore\bin\Debug\netstandard2.0\EngagerMobile.Mariteam.ApplicationCore.pdb
+C:\Office_Work\MobileApp\EngagerMobile.Mariteam.ApplicationCore\obj\Debug\netstandard2.0\EngagerMobile.Mariteam.ApplicationCore.csproj.AssemblyReference.cache
+C:\Office_Work\MobileApp\EngagerMobile.Mariteam.ApplicationCore\obj\Debug\netstandard2.0\EngagerMobile.Mariteam.ApplicationCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Office_Work\MobileApp\EngagerMobile.Mariteam.ApplicationCore\obj\Debug\netstandard2.0\EngagerMobile.Mariteam.ApplicationCore.AssemblyInfoInputs.cache
+C:\Office_Work\MobileApp\EngagerMobile.Mariteam.ApplicationCore\obj\Debug\netstandard2.0\EngagerMobile.Mariteam.ApplicationCore.AssemblyInfo.cs
+C:\Office_Work\MobileApp\EngagerMobile.Mariteam.ApplicationCore\obj\Debug\netstandard2.0\EngagerMobile.Mariteam.ApplicationCore.csproj.CoreCompileInputs.cache
+C:\Office_Work\MobileApp\EngagerMobile.Mariteam.ApplicationCore\obj\Debug\netstandard2.0\EngagerMobile.Mariteam.ApplicationCore.sourcelink.json
+C:\Office_Work\MobileApp\EngagerMobile.Mariteam.ApplicationCore\obj\Debug\netstandard2.0\EngagerMobile.Mariteam.ApplicationCore.dll
+C:\Office_Work\MobileApp\EngagerMobile.Mariteam.ApplicationCore\obj\Debug\netstandard2.0\EngagerMobile.Mariteam.ApplicationCore.pdb

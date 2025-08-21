@@ -1,0 +1,11 @@
+ç
+ÅC:\Office_Work\MobileApp\EngagerMobile.Mariteam.Services\obj\Debug\netstandard2.0\.NETStandard,Version=v2.0.AssemblyAttributes.csutf-8ç
+ÅC:\Office_Work\MobileApp\EngagerMobile.Mariteam.Services\obj\Debug\netstandard2.0\EngagerMobile.Mariteam.Services.AssemblyInfo.csutf-8`
+WC:\Office_Work\MobileApp\EngagerMobile.Mariteam.Services\WorkOrders\WorkOrderService.csutf-8_
+VC:\Office_Work\MobileApp\EngagerMobile.Mariteam.Services\WorkOrders\SnapShotService.csutf-8`
+WC:\Office_Work\MobileApp\EngagerMobile.Mariteam.Services\WorkOrders\SignatureService.csutf-8h
+_C:\Office_Work\MobileApp\EngagerMobile.Mariteam.Services\WorkOrders\PendingSignEntityService.csutf-8V
+MC:\Office_Work\MobileApp\EngagerMobile.Mariteam.Services\Users\UserService.csutf-8f
+]C:\Office_Work\MobileApp\EngagerMobile.Mariteam.Services\Notifications\NotificationService.csutf-8c
+ZC:\Office_Work\MobileApp\EngagerMobile.Mariteam.Services\GeoLocation\GeoLocationService.csutf-8T
+KC:\Office_Work\MobileApp\EngagerMobile.Mariteam.Services\AbstractService.csutf-8

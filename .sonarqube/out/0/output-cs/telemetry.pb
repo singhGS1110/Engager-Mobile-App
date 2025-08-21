@@ -1,0 +1,1 @@
+zR[C:\Office_Work\MobileApp\EngagerMobile.Mariteam.Common\EngagerMobile.Mariteam.Common.csproj¢netstandard2.0ò	CSharp7_3

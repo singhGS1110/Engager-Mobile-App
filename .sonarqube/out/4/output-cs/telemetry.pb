@@ -1,0 +1,1 @@
+€RtC:\Office_Work\MobileApp\EngagerMobile.Mariteam\EngagerMobile.Mariteam.Android\EngagerMobile.Mariteam.Android.csprojòCSharp8

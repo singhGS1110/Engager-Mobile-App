@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EngagerMobile.Mariteam.Services")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1b08fc3fb50a9666cc1384dbc1062fc7b5270768")]
 [assembly: System.Reflection.AssemblyProductAttribute("EngagerMobile.Mariteam.Services")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EngagerMobile.Mariteam.Services")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

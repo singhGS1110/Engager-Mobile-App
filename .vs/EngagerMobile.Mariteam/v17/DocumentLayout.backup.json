@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\WorkplaceFF\\MTS\\MobileApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{13309DE9-0B25-4AA8-A925-69D3DC28FA07}|EngagerMobile.Mariteam.Common\\EngagerMobile.Mariteam.Common.csproj|c:\\workplaceff\\mts\\mobileapp\\engagermobile.mariteam.common\\configs\\serverconfigs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13309DE9-0B25-4AA8-A925-69D3DC28FA07}|EngagerMobile.Mariteam.Common\\EngagerMobile.Mariteam.Common.csproj|solutionrelative:engagermobile.mariteam.common\\configs\\serverconfigs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D8A1B8A-2DC4-4E92-B7E3-4C3AF938D59E}|EngagerMobile.Mariteam\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.csproj|c:\\workplaceff\\mts\\mobileapp\\engagermobile.mariteam\\engagermobile.mariteam\\views\\signinpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D8A1B8A-2DC4-4E92-B7E3-4C3AF938D59E}|EngagerMobile.Mariteam\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.csproj|solutionrelative:engagermobile.mariteam\\engagermobile.mariteam\\views\\signinpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13309DE9-0B25-4AA8-A925-69D3DC28FA07}|EngagerMobile.Mariteam.Common\\EngagerMobile.Mariteam.Common.csproj|c:\\workplaceff\\mts\\mobileapp\\engagermobile.mariteam.common\\constants\\urlconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13309DE9-0B25-4AA8-A925-69D3DC28FA07}|EngagerMobile.Mariteam.Common\\EngagerMobile.Mariteam.Common.csproj|solutionrelative:engagermobile.mariteam.common\\constants\\urlconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4D8A1B8A-2DC4-4E92-B7E3-4C3AF938D59E}|EngagerMobile.Mariteam\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.csproj|c:\\workplaceff\\mts\\mobileapp\\engagermobile.mariteam\\engagermobile.mariteam\\views\\pendingsignpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4D8A1B8A-2DC4-4E92-B7E3-4C3AF938D59E}|EngagerMobile.Mariteam\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam.csproj|solutionrelative:engagermobile.mariteam\\engagermobile.mariteam\\views\\pendingsignpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -17,18 +29,57 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SignInPage.xaml.cs",
+              "DocumentMoniker": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam\\Views\\SignInPage.xaml.cs",
+              "RelativeDocumentMoniker": "EngagerMobile.Mariteam\\EngagerMobile.Mariteam\\Views\\SignInPage.xaml.cs",
+              "ToolTip": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam\\Views\\SignInPage.xaml.cs",
+              "RelativeToolTip": "EngagerMobile.Mariteam\\EngagerMobile.Mariteam\\Views\\SignInPage.xaml.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAAAEQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T06:18:11.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ServerConfigs.cs",
+              "DocumentMoniker": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam.Common\\Configs\\ServerConfigs.cs",
+              "RelativeDocumentMoniker": "EngagerMobile.Mariteam.Common\\Configs\\ServerConfigs.cs",
+              "ToolTip": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam.Common\\Configs\\ServerConfigs.cs",
+              "RelativeToolTip": "EngagerMobile.Mariteam.Common\\Configs\\ServerConfigs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T06:17:24.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UrlConstants.cs",
+              "DocumentMoniker": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam.Common\\Constants\\UrlConstants.cs",
+              "RelativeDocumentMoniker": "EngagerMobile.Mariteam.Common\\Constants\\UrlConstants.cs",
+              "ToolTip": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam.Common\\Constants\\UrlConstants.cs",
+              "RelativeToolTip": "EngagerMobile.Mariteam.Common\\Constants\\UrlConstants.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T06:17:13.452Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{99b8fa2f-ab90-4f57-9c32-949f146f1914}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "PendingSignPage.xaml.cs",
               "DocumentMoniker": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam\\Views\\PendingSignPage.xaml.cs",
               "RelativeDocumentMoniker": "EngagerMobile.Mariteam\\EngagerMobile.Mariteam\\Views\\PendingSignPage.xaml.cs",
               "ToolTip": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam\\EngagerMobile.Mariteam\\Views\\PendingSignPage.xaml.cs",
               "RelativeToolTip": "EngagerMobile.Mariteam\\EngagerMobile.Mariteam\\Views\\PendingSignPage.xaml.cs",
-              "ViewState": "AQIAAEABAAAAAAAAAAAswF8BAAA/AAAA",
+              "ViewState": "AgIAAEABAAAAAAAAAAAswGEBAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-21T08:52:22.157Z",
               "EditorCaption": ""

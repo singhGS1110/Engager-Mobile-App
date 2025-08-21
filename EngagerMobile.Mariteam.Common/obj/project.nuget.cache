@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "M/2RWFSl7FE=",
+  "dgSpecHash": "FHEg9NFhv9w=",
   "success": true,
-  "projectFilePath": "C:\\WorkplaceFF\\MTS\\MobileApp\\EngagerMobile.Mariteam.Common\\EngagerMobile.Mariteam.Common.csproj",
+  "projectFilePath": "C:\\Office_Work\\MobileApp\\EngagerMobile.Mariteam.Common\\EngagerMobile.Mariteam.Common.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\AungYeKaung\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\AungYeKaung\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\Gurkirat\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Gurkirat\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

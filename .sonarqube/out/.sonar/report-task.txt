@@ -1,0 +1,6 @@
+projectKey=Engager-Mobile-App
+serverUrl=http://localhost:9000
+serverVersion=25.8.0.112029
+dashboardUrl=http://localhost:9000/dashboard?id=Engager-Mobile-App
+ceTaskId=c3f92296-b6a5-496b-a2e2-5482ecec2688
+ceTaskUrl=http://localhost:9000/api/ce/task?id=c3f92296-b6a5-496b-a2e2-5482ecec2688

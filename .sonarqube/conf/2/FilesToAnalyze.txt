@@ -1,0 +1,9 @@
+﻿C:\Office_Work\MobileApp\EngagerMobile.Mariteam.Services\AbstractService.cs
+C:\Office_Work\MobileApp\EngagerMobile.Mariteam.Services\GeoLocation\GeoLocationService.cs
+C:\Office_Work\MobileApp\EngagerMobile.Mariteam.Services\Notifications\NotificationService.cs
+C:\Office_Work\MobileApp\EngagerMobile.Mariteam.Services\Users\UserService.cs
+C:\Office_Work\MobileApp\EngagerMobile.Mariteam.Services\WorkOrders\PendingSignEntityService.cs
+C:\Office_Work\MobileApp\EngagerMobile.Mariteam.Services\WorkOrders\SignatureService.cs
+C:\Office_Work\MobileApp\EngagerMobile.Mariteam.Services\WorkOrders\SnapShotService.cs
+C:\Office_Work\MobileApp\EngagerMobile.Mariteam.Services\WorkOrders\WorkOrderService.cs
+C:\Office_Work\MobileApp\EngagerMobile.Mariteam.Services\EngagerMobile.Mariteam.Services.csproj.vspscc
