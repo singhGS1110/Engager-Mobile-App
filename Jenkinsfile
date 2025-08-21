@@ -1,5 +1,5 @@
 pipeline {
-    agent any // This pipeline can run on any available Jenkins agent.
+    agent {label 'Windows-Agent'} // This pipeline can run on any available Jenkins agent.
               // If you set up a specific Windows agent, you can change this to:
               // agent { label 'your-windows-agent-label' }
 
@@ -83,4 +83,5 @@ pipeline {
             echo "Pipeline successfully completed and SonarQube analysis sent!"
         }
     }
+
 }
